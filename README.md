@@ -6,10 +6,10 @@ Example:
 ```js
 import ToggleState from 'react-toggle-state';
 <ToggleState>
-  {({state, turnTrue, turnFalse}) =>
+  {({isTrue, turnTrue, turnFalse}) =>
     <div>
-      <p>This is {state ? 'true': 'false'}</p>
-      <button onClick={state ? turnFalse : turnTrue}>Toggle</button>
+      <p>This is {isTrue ? 'true': 'false'}</p>
+      <button onClick={isTrue ? turnFalse : turnTrue}>Toggle</button>
     </div>
   }
 </ToggleState>

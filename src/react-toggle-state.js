@@ -9,14 +9,8 @@ export default class ToggleState extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      data: false
+      data: props.defaultState
     };
-  }
-
-  componentWillMount() {
-    this.setState({
-      data: !!this.props.defaultState
-    });
   }
 
   turnTrue = () => {
@@ -33,7 +27,7 @@ export default class ToggleState extends Component {
 
   render() {
     return this.props.children({
-      state: this.state.data,
+      isTrue: this.state.data,
       turnTrue: this.turnTrue,
       turnFalse: this.turnFalse
     });
